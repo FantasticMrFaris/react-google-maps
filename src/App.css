@@ -1,0 +1,142 @@
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  height: 64px;
+  background: #fff;
+  border-bottom: 1px solid #e9ecef;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav-brand a {
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #007bff;
+  background: #f8f9ff;
+}
+
+.app-main {
+  flex: 1;
+  min-height: 0;
+}
+
+.page-container {
+  padding: 40px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 16px 0;
+}
+
+.hero-section p {
+  font-size: 20px;
+  color: #666;
+  margin: 0 0 32px 0;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 16px 32px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.cta-button:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app-nav {
+    padding: 0 16px;
+  }
+  
+  .nav-links {
+    gap: 16px;
+  }
+  
+  .nav-link {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  
+  .page-container {
+    padding: 24px 16px;
+  }
+  
+  .hero-section {
+    padding: 60px 0;
+  }
+  
+  .hero-section h1 {
+    font-size: 36px;
+  }
+  
+  .hero-section p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-nav {
+    flex-direction: column;
+    height: auto;
+    padding: 12px 16px;
+    gap: 12px;
+  }
+  
+  .nav-links {
+    gap: 12px;
+  }
+  
+  .hero-section h1 {
+    font-size: 28px;
+  }
+  
+  .hero-section p {
+    font-size: 16px;
+  }
+}

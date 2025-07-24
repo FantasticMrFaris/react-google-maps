@@ -1,0 +1,135 @@
+.sports-venues-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f5f5;
+}
+
+.sports-venues-page.error {
+  justify-content: center;
+  align-items: center;
+}
+
+.error-message {
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.error-message h2 {
+  color: #dc3545;
+  margin: 0 0 16px 0;
+}
+
+.error-message p {
+  color: #666;
+  margin: 0;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background: white;
+  border-bottom: 1px solid #e9ecef;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.filters label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+.sport-filter {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.sport-filter:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.page-content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 16px;
+  padding: 16px;
+  min-height: 0;
+}
+
+.venues-sidebar {
+  min-height: 0;
+}
+
+.map-container {
+  min-height: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .page-content {
+    grid-template-columns: 350px 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+  
+  .page-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 1fr;
+  }
+  
+  .venues-sidebar {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header {
+    padding: 16px;
+  }
+  
+  .page-content {
+    padding: 12px;
+    gap: 12px;
+  }
+  
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+}
