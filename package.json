@@ -32,6 +32,7 @@
     "clean": "rm -rf ./dist && mkdir ./dist",
     "build": "npm-run-all clean -p build:**",
     "start": "run-p start:*",
+    "dev": "vite",
     "build:examples": "cp ./examples/examples.css dist",
     "build:microbundle": "microbundle -o dist/index.js -f modern,umd --globals react=React,react-dom=ReactDOM --jsx React.createElement --jsxFragment React.Fragment --no-compress --tsconfig tsconfig.build.json",
     "build:microbundle:server": "microbundle -o dist/server/index.js -f modern,umd --globals react=React,react-dom=ReactDOM --jsx React.createElement --jsxFragment React.Fragment --no-compress --tsconfig tsconfig.build.json ./src/server/index.ts",
